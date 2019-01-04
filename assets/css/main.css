@@ -157,6 +157,7 @@ section#information {
     border-radius: 15px;
     box-shadow: 0 0 25px 0px #CDCCC9; }
     #projects section#projects-grid .card .card-img-top {
+      border-bottom: 1px solid rgba(50,50,50,.25);
       border-radius: 15px 15px 0 0; }
     #projects section#projects-grid .card .card-body {
       padding: 40px; }
