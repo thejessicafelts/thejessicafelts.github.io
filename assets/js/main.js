@@ -23,3 +23,18 @@ listViewIcon.click(function(){
   gridViewIcon.toggleClass('active');
   gridViewContainer.toggleClass('active');
 })
+
+/* Border Radius Visualization */
+const box = document.getElementById("box");
+const slider = document.getElementById("slider");
+let radius = document.getElementById("radius").value;
+let currentRadius = document.getElementById("currentRadius");
+
+currentRadius.innerHTML = radius;
+slider.onchange = updateRadius;
+
+function updateRadius(){
+ let radius = document.getElementById("radius").value;
+ currentRadius.innerHTML = radius;
+ box.style.borderRadius = radius + "%";
+};
