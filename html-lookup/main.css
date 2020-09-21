@@ -11,7 +11,9 @@ code {
 
 header, footer {
     text-align: center;
-    width: 600px;
+    padding: 0px 25px;
+    width: 100%;
+    max-width: 650px;
 }
 
 header {
