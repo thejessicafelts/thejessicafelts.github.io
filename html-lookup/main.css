@@ -4,3 +4,33 @@
     margin: 0;
     padding: 0;
 }
+
+h1 {
+    margin: 25px 0;
+    text-align: center;
+}
+
+button.accordion {
+    background: whitesmoke;
+    border: none;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1.25rem;
+    outline: none;
+    padding: 15px 20px;
+    text-align: left;
+    transition: background-color 0.25s linear;
+    width: 100%;
+}
+
+button.accordion:hover {
+    background: lightgray;
+}
+
+.deprecated button.accordion {
+    background-color: #ffb5b5;
+}
+
+.deprecated button.accordion:hover {
+    background: lightcoral;
+}
