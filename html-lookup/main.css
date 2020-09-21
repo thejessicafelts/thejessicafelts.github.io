@@ -5,20 +5,46 @@
     padding: 0;
 }
 
-header {
-    margin: 25px auto 35px;
+code {
+    font-family: monospace;
+}
+
+header, footer {
     text-align: center;
     width: 600px;
+}
+
+header {
+    margin: 25px auto 35px;
+}
+
+footer {
+    margin: 35px auto 25px;
+    text-transform: uppercase;
 }
 
 header h1 {
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.15rem;
+header p,
+footer p {
     font-weight: 300;
     line-height: 1.5;
+}
+
+header p {
+    font-size: 1.15rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    padding: 0 5px;
 }
 
 button.accordion {
