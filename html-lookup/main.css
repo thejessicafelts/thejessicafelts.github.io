@@ -13,7 +13,7 @@ header, footer {
     text-align: center;
     padding: 0px 25px;
     width: 100%;
-    max-width: 650px;
+    max-width: 600px;
 }
 
 header {
@@ -36,11 +36,12 @@ footer p {
 }
 
 header p {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
 }
 
 footer span {
@@ -49,12 +50,19 @@ footer span {
     padding: 0 5px;
 }
 
+div.tags-wrapper {
+    margin: 0 auto;
+    width: 600px;
+}
+
 button.accordion {
     background: whitesmoke;
     border: none;
+    border: 1px solid lightgrey;
     cursor: pointer;
     font-family: monospace;
     font-size: 1.25rem;
+    margin-bottom: 5px;
     outline: none;
     padding: 15px 20px;
     text-align: left;
@@ -68,6 +76,7 @@ button.accordion:hover {
 
 .deprecated button.accordion {
     background-color: #ffb5b5;
+    border: 1px solid lightcoral;
 }
 
 .deprecated button.accordion:hover {
