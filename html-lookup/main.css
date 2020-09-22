@@ -84,9 +84,13 @@ button.accordion:hover {
 }
 
 .tags-options {
+    margin-bottom: 15px;
+}
+
+.tags-options div {
     margin-bottom: 10px;
 }
 
 .tags-options label {
-    font-weight: 600;
+    font-weight: bold;
 }
