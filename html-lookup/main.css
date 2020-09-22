@@ -82,3 +82,11 @@ button.accordion:hover {
 .deprecated button.accordion:hover {
     background: lightcoral;
 }
+
+.tags-options {
+    margin-bottom: 10px;
+}
+
+.tags-options label {
+    font-weight: 600;
+}

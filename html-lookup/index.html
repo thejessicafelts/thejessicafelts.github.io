@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Lookup</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
 
@@ -14,6 +15,11 @@
     </header>
     
     <div class="tags-wrapper">
+
+        <div class="tags-options">
+            <input id="show-deprecated" type="checkbox" checked>
+            <label for="show-deprecated">Show Deprecated Tags</label>
+        </div>
 
         <!-- COMMENTS -->
         <section id="tag-comments" class="accordion-section tag">
@@ -120,7 +126,7 @@
         </section>
 
         <!-- BASEFONT (DEPRECATED) -->
-        <section id="tag-applet" class="accordion-section tag deprecated">
+        <section id="tag-basefont" class="accordion-section tag deprecated">
             <button class="accordion">&lt;basefont /&gt;</button>
             <div class="accordion-content">
                 <!-- Information -->
