@@ -43,3 +43,11 @@ function warningMsg(count){
         warningMsg.style.display = "none";
     }
 }
+
+// Details Not Yet Available Popup
+let accordionBtn = [...document.querySelectorAll('.accordion-btn')];
+accordionBtn.map(el => {
+    el.addEventListener("click", function(){
+        alert("Details are Not Yet Available for this Tag");
+    })
+});
