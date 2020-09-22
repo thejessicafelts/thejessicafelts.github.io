@@ -1,46 +1,36 @@
-// SHOW/HIDE DEPRECATED TAGS
+// Show/Hide Checkbox Selections
+let selections = 2;
 
-const deprecated = document.getElementsByClassName('deprecated');
+// Deprecated Tags
+const deprecated = [...document.getElementsByClassName('deprecated')];
 const showHideDeprecated = document.getElementById('show-deprecated');
-
 showHideDeprecated.addEventListener("click", function(){
-    if(showHideDeprecated.checked){
-        for(var i=0; i<deprecated.length; i+=1){
-            deprecated[i].style.display = "block";
-        }
-    } else {
-        for(var i=0; i<deprecated.length; i+=1){
-            deprecated[i].style.display = "none";
-        }
-    }
-    warningMessage()
+    showHide(showHideDeprecated, deprecated)
 });
 
-// SHOW/HIDE ACTIVE TAGS
-
-const active = document.querySelectorAll('.tag:not(.deprecated)');
+// Active Tags
+const active = [...document.querySelectorAll('.tag:not(.deprecated)')];
 const showHideActive = document.getElementById('show-active');
-
 showHideActive.addEventListener("click", function(){
-    if(showHideActive.checked){
-        for(var i=0; i<active.length; i+=1){
-            active[i].style.display = "block";
-        }
-    } else {
-        for(var i=0; i<active.length; i+=1){
-            active[i].style.display = "none";
-        }
-    }
-    warningMessage()
+    showHide(showHideActive, active)
 });
 
-// DISPLAY MESSAGE WHEN NO TAGS ARE DISPLAYED
+// Generic Function
+function showHide(trigger, elements) {
+    if(trigger.checked) {
+        selections++;
+        elements.map(el => el.style.display = "block");
+    } else {
+        selections--;
+        elements.map(el => el.style.display = "none");
+    }
+    warningMsg(selections);
+}
 
-function warningMessage(){
-    const checked = document.querySelectorAll('input:checked');
+// Warning Message
+function warningMsg(count){
     const warningMsg = document.getElementById('warning--no-tags');
-
-    if (checked.length === 0){
+    if (count === 0){
         warningMsg.style.display = "block";    
     } else {
         warningMsg.style.display = "none";
