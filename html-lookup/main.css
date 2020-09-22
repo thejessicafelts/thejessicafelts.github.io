@@ -94,3 +94,14 @@ button.accordion:hover {
 .tags-options label {
     font-weight: bold;
 }
+
+#warning--no-tags {
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+    display: none;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 30px;
+    padding: 15px 20px;
+    text-align: center;
+}

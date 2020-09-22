@@ -1,12 +1,7 @@
-// SHOW/HIDE ACTIVE AND DEPRECATED TAGS
+// SHOW/HIDE DEPRECATED TAGS
 
-const active = document.querySelectorAll('.tag:not(.deprecated)');
 const deprecated = document.getElementsByClassName('deprecated');
-
 const showHideDeprecated = document.getElementById('show-deprecated');
-const showHideActive = document.getElementById('show-active');
-
-console.log(active);
 
 showHideDeprecated.addEventListener("click", function(){
     if(showHideDeprecated.checked){
@@ -18,7 +13,13 @@ showHideDeprecated.addEventListener("click", function(){
             deprecated[i].style.display = "none";
         }
     }
+    warningMessage()
 });
+
+// SHOW/HIDE ACTIVE TAGS
+
+const active = document.querySelectorAll('.tag:not(.deprecated)');
+const showHideActive = document.getElementById('show-active');
 
 showHideActive.addEventListener("click", function(){
     if(showHideActive.checked){
@@ -30,4 +31,18 @@ showHideActive.addEventListener("click", function(){
             active[i].style.display = "none";
         }
     }
+    warningMessage()
 });
+
+// DISPLAY MESSAGE WHEN NO TAGS ARE DISPLAYED
+
+function warningMessage(){
+    const checked = document.querySelectorAll('input:checked');
+    const warningMsg = document.getElementById('warning--no-tags');
+
+    if (checked.length === 0){
+        warningMsg.style.display = "block";    
+    } else {
+        warningMsg.style.display = "none";
+    }
+}
