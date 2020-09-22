@@ -83,6 +83,15 @@ button.accordion-btn:hover {
     background: lightcoral;
 }
 
+.non-standard button.accordion-btn {
+    background-color: lightgoldenrodyellow;
+    border: 1px solid gold;
+}
+
+.non-standard button.accordion-btn:hover {
+    background: gold;
+}
+
 .tags-options {
     margin-bottom: 15px;
 }
