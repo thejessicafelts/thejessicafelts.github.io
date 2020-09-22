@@ -55,14 +55,14 @@ div.tags-wrapper {
     width: 600px;
 }
 
-button.accordion {
+button.accordion-btn {
     background: whitesmoke;
     border: none;
     border: 1px solid lightgrey;
     cursor: pointer;
     font-family: monospace;
     font-size: 1.25rem;
-    margin-bottom: 5px;
+    margin-top: 5px;
     outline: none;
     padding: 15px 20px;
     text-align: left;
@@ -70,16 +70,16 @@ button.accordion {
     width: 100%;
 }
 
-button.accordion:hover {
+button.accordion-btn:hover {
     background: lightgray;
 }
 
-.deprecated button.accordion {
+.deprecated button.accordion-btn {
     background-color: #ffb5b5;
     border: 1px solid lightcoral;
 }
 
-.deprecated button.accordion:hover {
+.deprecated button.accordion-btn:hover {
     background: lightcoral;
 }
 
@@ -104,4 +104,26 @@ button.accordion:hover {
     margin-top: 30px;
     padding: 15px 20px;
     text-align: center;
+}
+
+button.accordion-btn::after {
+    content: '+';
+    font-weight: bold;
+    position: absolute;
+    right: calc(50% - 285px);
+}
+
+.accordion-content {
+    border: 1px solid lightgrey;
+    border-top: none;
+    margin-bottom: 5px;
+    padding: 20px 20px 15px;
+    display: none;
+}
+
+.deprecated .accordion-content {
+    border: 1px solid lightcoral;
+    border-top: none;
+    margin-bottom: 5px;
+    padding: 25px 20px 20px;
 }
