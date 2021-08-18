@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    font-family: monospace;
+}
+
+header, footer {
+    text-align: center;
+    padding: 0px 25px;
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    margin: 25px auto 35px;
+}
+
+footer {
+    margin: 35px auto 25px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p,
+footer p {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+header p {
+    font-size: 1.05rem;
+}
+
+footer p {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+footer span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    padding: 0 5px;
+}
+
+div.tags-wrapper {
+    margin: 0 auto;
+    width: 600px;
+}
+
+button.accordion-btn {
+    background: whitesmoke;
+    border: none;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 1.25rem;
+    margin-top: 5px;
+    outline: none;
+    padding: 15px 20px;
+    text-align: left;
+    transition: background-color 0.25s linear;
+    width: 100%;
+}
+
+button.accordion-btn:hover {
+    background: lightgray;
+}
+
+.deprecated button.accordion-btn {
+    background-color: #ffb5b5;
+    border: 1px solid lightcoral;
+}
+
+.deprecated button.accordion-btn:hover {
+    background: lightcoral;
+}
+
+.non-standard button.accordion-btn {
+    background-color: lightgoldenrodyellow;
+    border: 1px solid gold;
+}
+
+.non-standard button.accordion-btn:hover {
+    background: gold;
+}
+
+.tags-options {
+    margin-bottom: 15px;
+}
+
+.tags-options div {
+    margin-bottom: 10px;
+}
+
+.tags-options label {
+    font-weight: bold;
+}
+
+#warning--no-tags {
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+    display: none;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 30px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+button.accordion-btn::after {
+    content: '+';
+    font-weight: bold;
+    position: absolute;
+    right: calc(50% - 285px);
+}
+
+.accordion-content {
+    border: 1px solid lightgrey;
+    border-top: none;
+    margin-bottom: 5px;
+    padding: 20px 20px 15px;
+    display: none;
+}
+
+.deprecated .accordion-content {
+    border: 1px solid lightcoral;
+    border-top: none;
+    margin-bottom: 5px;
+    padding: 25px 20px 20px;
+}

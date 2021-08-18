@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section#main-section {
+    background: lightblue;
+    margin: 0 auto;
+    padding: 30px;
+    width: 100%;
+}
+
+section.sub-section,
+section.sub-sub-section,
+section.sub-sub-sub-section,
+section.sub-sub-sub-sub-section {
+    margin: 20px auto 0;
+    padding: 30px;
+}
+
+section.sub-section {
+    background: lightpink;
+}
+
+section.sub-sub-section {
+    background: lightgreen;
+}
+
+section.sub-sub-sub-section {
+    background: lightyellow;
+}
+
+section.sub-sub-sub-sub-section {
+    background: lightgrey;
+}
+
+h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+h3, h4 {
+    margin-bottom: 10px;
+}
+
+hr.custom-1 {
+    border: 2px solid black;
+    margin: 20px 0 30px;
+    width: 50px;
+}
