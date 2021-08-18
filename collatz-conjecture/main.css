@@ -1,0 +1,126 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+}
+
+main {
+   margin: 100px auto;
+}
+
+ol {
+   width: 500px;
+   margin: 30px auto;
+}
+
+li {
+   margin: 10px auto;
+   margin-left: 20px;
+   font-weight: 500;
+}
+
+ol li {
+   width: 460px;
+}
+
+ol li p {
+   font-weight: 300;
+   width: 100%;
+}
+
+ol li ol {
+   list-style-type: lower-alpha;
+   margin: 0 0 0 30px;
+   width: 450px;
+}
+
+ol li ol li {
+   margin-left: 5px;
+   width: 440px;
+}
+
+ol li ol li p {
+   width: 100%;
+}
+
+h1 {
+   font-size: 1.5rem;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+p {
+   font-weight: 300;
+   width: 500px;
+   margin: 0 auto;
+}
+
+section#user-input {
+   margin: 0 auto;
+   width: 250px;
+   text-align: center;
+}
+
+section#user-input label {
+   font-size: 1rem;
+   text-transform: uppercase;
+   display: inline-block;
+   margin: 30px 0 10px;
+   font-weight: 500;
+}
+
+section#user-input input[type=number],
+section#user-input input[type=submit] {
+   padding: 5px 10px;
+   font-weight: 300;
+}
+
+section#user-input input[type=number] {
+   width: 250px;
+   font-size: 1.5rem;
+   margin-bottom: 5px;
+}
+
+section#user-input input[type=submit] {
+   font-size: 1rem;
+   text-transform: uppercase;
+   font-weight: 900;
+   width: 250px;
+   height: 42px;
+   margin-bottom: 30px;
+}
+
+/* Remove Spin Buttons */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+section#output {
+   display: none;
+   text-align: center;
+}
+
+hr.partial-divider {
+   width: 50%;
+   height: 1px;
+   border: none;
+   height: 1px;
+   background: rgba(0, 0, 0, 0.25);
+   margin: 30px auto;
+}
+
+code {
+   font-family: monospace;
+   background: rgb(223, 223, 223);
+   padding: 0px 3px 2px;
+}
