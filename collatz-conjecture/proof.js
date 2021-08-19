@@ -17,7 +17,7 @@ function submit_form(){
 
    if (userInput <= maxNumber){
 
-      console.log(`Step ${stepCounter} -- the user entered: ${userInput}.`);
+      document.getElementById("outputTable").innerHTML += `The user entered: ${userInput}.<br /><br /><strong>Step ${stepCounter}</strong><br />`;
 
       // While the sequence is greater than 1...
       while ((userInput > 1) && (userInput <= maxNumber)) {
@@ -28,59 +28,78 @@ function submit_form(){
          // If userInput is Even...
          if (checkNumber == "even") {
 
-            console.log(`----------- ${userInput} is ${checkNumber}; n = (n / 2) will be performed.`);
+            document.getElementById("outputTable").innerHTML += `${userInput} is ${checkNumber}.<br /> n = (n / 2) will be performed. <br />`;
 
             var userInput = (userInput / 2);
             stepCounter++; 
 
-            console.log(`Step ${stepCounter} -- the new number is: ${userInput}.`);
+            document.getElementById("outputTable").innerHTML += `The new number is: ${userInput}.<br /><br /><strong>Step ${stepCounter}</strong><br />`;
 
          } 
          
          // If userInput is Odd... 
          else if (checkNumber == "odd") {
 
-            console.log(`----------- ${userInput} is ${checkNumber}; n = ((n * 3) + 1) will be performed.`);
+            document.getElementById("outputTable").innerHTML += `${userInput} is ${checkNumber}.<br /> n = ((n * 3) + 1) will be performed. <br />`;
 
             var userInput = ((userInput * 3) + 1);
             stepCounter++;
 
-            console.log(`Step ${stepCounter} -- The new number is: ${userInput}.`);
+            document.getElementById("outputTable").innerHTML += `The new number is: ${userInput}.<br /><br /><strong>Step ${stepCounter}</strong><br />`;
 
          } 
          
          // If userInput is somehow neither Even nor Odd...
          else {
+
+            // Add this snippet to the UI and remove from console
             console.log(`ERROR: Cannot determine if ${userInput} is Even or Odd...`)
+         
          }
          
       }
 
       if (userInput > maxNumber) {
+
+         // Add this snippet to the UI and remove from console
          console.log(`${userInput} is too large; please enter a smaller number.`);
          console.log("Sequence terminated.");
+
       }
 
       if (userInput == 1) {
-         // Once sequence reaches 1, termiate the sequence...
-         console.log("The sequence has reeached 1.");
-         console.log("Sequence terminated.");
 
          // Unhide the Output Section
          document.getElementById("output").style.display = "block";
 
-         var outputSummary = `It took <strong>${stepCounter} steps</strong> for ${originalInput} to reach 1.`;
-         console.log(`It took ${stepCounter} steps for ${originalInput} to reach 1.`);
+         // Output Summary, based on stepCounter value
+         if (stepCounter > 1) {
+
+            var outputSummary = `It took <strong>${stepCounter} steps</strong> for ${originalInput} to reach 1.`;
+         
+         }
+         else if (stepCounter == 1) {
+         
+            var outputSummary = `It took <strong>${stepCounter} step</strong> for ${originalInput} to reach 1.`;
+         
+         }
+         else {
+         
+            var outputSummary = `ERROR: Something went wrong!`;
+         
+         }
 
          // Print the outputSummary onto the UI
          document.getElementById("outputSummary").innerHTML = outputSummary;
 
-         // Print the output into a Table
-         // document.getElementById("outputTable").innerHTML = `This will be a table!`;
+         // Print the last line of outputTable
+         document.getElementById("outputTable").innerHTML += `The sequence has reached 1.<br />Sequence terminated.`;
+
       }
 
    } else {
 
+      // Add this snippet to the UI and remove from console
       console.log(`${userInput} is too large; please enter a smaller number.`);
 
    }
