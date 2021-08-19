@@ -25,18 +25,31 @@
          </ol>
       </section>
       <section id="user-input">
-         <form name="user-input-form">
+         <form id="userInputForm" name="user-input-form">
             <label for="userInput">Enter a Positive Integer:</label><br/>
-            <input id="userInput" type="number" min="1" max="9007199254740991" step="1" /><br/>
+            <input id="userInput" onfocus="this.value=''" type="number" min="1" max="9007199254740991" step="1" /><br/>
             <input id="userSubmit" type="submit" onclick="submit_form()" />
          </form>
       </section>
       <section id="output">
-         <p id="outputSummary"></p>
+         <section id="outputSummary"></section>
          <hr class="partial-divider" />
-         <div id="outputTable">
-
-         </div>
+         <section id="outputTableWrapper">
+            <table id="outputTable">
+               <thead id="outputTableHead">
+                  <tr>
+                     <th class="step">Step</th>
+                     <th class="num-start">Starting Number</th>
+                     <th class="num-status">Even or Odd</th>
+                     <th class="equation">Equation</th>
+                     <th class="num-end">New Number</th>
+                  </tr>
+               </thead>
+               <tbody id="outputTableBody"></tbody>
+            </table>
+            <section id="outputTableSummary"></section>
+         </section>
+         <section id="outputGraph"></section>
       </section>
    </main>
 </body>
