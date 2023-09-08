@@ -241,5 +241,5 @@ header#project-navigation {
 
 #project-navigation i.fa-github,
 #project-navigation i.fa-arrow-circle-left {
-    font-size: 25px;
+    font-size: 25px !important;
 }
