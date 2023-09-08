@@ -43,7 +43,7 @@ function netIncomeCalculation(){
         return '$' + Number(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
-    let income = parseInt(prompt("Enter your Income:"), 10);
+    let income = parseInt(document.getElementById("incomeInput").value, 10);
     let incomeFormatted = formatCurrency(income)
 
     // Michigan Income Tax
@@ -114,20 +114,16 @@ function netIncomeCalculation(){
     let netIncome = income - michiganIncomeTax - oasdiTax - medicareTax - federalTax;
     let netIncomeFormatted = formatCurrency(netIncome);
 
-    // Net Demo Block
+    // Toggle visibility of netDemoDiv first
+    // Always set the display to block when the function runs
     var netDemoDiv = document.getElementById("netdemo");
+    netDemoDiv.style.display = "block";
 
-    if (netDemoDiv.style.display === "none" || netDemoDiv.style.display === "") {
-        netDemoDiv.style.display = "block";
-    } else {
-        netDemoDiv.style.display = "none";
-    }
-
+    // Then update the display elements only when netDemoDiv is visible
     document.getElementById("incomeProvided").innerHTML = "<strong>Gross Income:</strong> " + incomeFormatted;
     document.getElementById("michiganTax").innerHTML = "<strong>Michigan Income Tax:</strong> " + michiganIncomeTaxFormatted;
     document.getElementById("oasdiTax").innerHTML = "<strong>OASDI Withholdings:</strong> " + oasdiTaxFormatted;
     document.getElementById("medicareTax").innerHTML = "<strong>Medicare Withholdings:</strong> " + medicareTaxFormatted;
     document.getElementById("federalTax").innerHTML = "<strong>Federal Income Tax:</strong> " + federalTaxFormatted;
     document.getElementById("netIncome").innerHTML = "<strong>Net Income:</strong> " + netIncomeFormatted;
-
 }
