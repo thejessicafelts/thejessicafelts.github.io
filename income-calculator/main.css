@@ -6,7 +6,7 @@
     font-size: 18px;
 }
 
-#outerlayer {
+#outerlayer.container {
     background: url(background.jpg) no-repeat center center;
     position: fixed;
     background-size: cover;
@@ -222,5 +222,9 @@ p small strong {
 
 #taxPercentage {
     margin-top: 10px;
+}
+
+#taxPercentage,
+#taxPercentage strong {
     font-size: 12px;
 }
