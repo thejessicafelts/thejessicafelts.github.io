@@ -243,3 +243,7 @@ header#project-navigation {
 #project-navigation i.fa-arrow-circle-left {
     font-size: 25px !important;
 }
+
+p.infoNotice {
+    margin-bottom: 0;
+}
