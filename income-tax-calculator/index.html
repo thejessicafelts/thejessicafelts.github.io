@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <meta name="description" content="An Income Tax Calculator, Developed by Jessica Felts">
+   <meta name="keywords" content="Jessica Felts, GitHub, Portfolio, Income Tax Calculator">
+   <meta name="author" content="Jessica Felts">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Income Tax Calculator | Jessica Felts | Selected Projects</title>
+   <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://use.typekit.net/mfl4aal.css">
+   <link rel="stylesheet" href="../assets/css/main.css">
+   <link rel="stylesheet" href="main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ </head><!-- end head -->
+ <body id="project_incometax">
+   <header id="project-navigation">
+     <div class="container">
+       <div class="row">
+         <div class="project-name col-sm-12 col-md-6"><h1 class="project-title">Income Tax Calculator</h1></div>
+         <div class="project-links col-sm-12 col-md-6">
+           <ul class="flex flex-row flex-right">
+             <li class="projects-home" title="Go to Projects">
+               <a href="../"><i class="fa fa-arrow-circle-left"></i></a>
+             </li>
+             <li class="project-repo" title="Go to Repository">
+               <a href="https://github.com/thejessicafelts/incometax" target="_blank"><i class="fa fa-github"></i></a>
+             </li>
+           </ul>
+         </div>
+     </div>
+   </header><!-- update header#global-header -->
+   <section class="container">
+
+    <section id="incomeTaxApplication">
+
+        <h1>Income Tax Calculators</h1>
+
+        <script defer src="main.js"></script>
+
+        <section class="tabsSection">
+            <div class="tab">
+                <button class="tablinks active" onclick="openCalculator(event, 'infoTab')">Information</button>
+                <button class="tablinks" onclick="openCalculator(event, 'netIncomeCalculator')">Net Income</button>
+                <button class="tablinks" onclick="openCalculator(event, 'grossIncomeCalculator')">Gross Income</button>
+                <button class="tablinks" onclick="openCalculator(event, 'termsTab')">Terminology</button>
+            </div>
+
+            <div id="infoTab" class="tabcontent" style="display: block;">
+                <p class="infoNotice" style="display: block;">The information on this site is accurate to the best of my knowledge, and is subject to change without notice. This is not financial advice. Please see an Accountant or Financial Advisor before acting on any information provided from these calculations.</p>
+            </div>
+
+            <div id="netIncomeCalculator" class="tabcontent">
+
+                <p>Net Income calculation.</p>
+
+                <section id="netdemo">
+                    <p id="incomeProvided"></p>
+                    <div id="netdemoinner">
+                        <p id="michiganTax"></p>
+                        <p id="oasdiTax"></p>
+                        <p id="medicareTax"></p>
+                        <p id="federalTax"></p>
+                    </div>
+                    <p id="netIncome"></p>
+                </section>
+
+                <button onclick="netIncomeCalculation()">New Calculation</button>
+
+        <script src="assets/netIncome.js"></script>
+
+            </div>
+
+            <div id="grossIncomeCalculator" class="tabcontent">
+
+                <h2>Coming Soon!</h2>
+
+                <!-- <p>Calculate your Gross Income from a given amount of "take-home" pay.</p>
+                <button onclick="grossIncomeCalculation()">Calculate Gross Income</button>
+                <p id="grossdemo"></p>
+
+                <script src="assets/grossIncome.js"></script> -->
+
+            </div>
+
+            <div id="termsTab" class="tabcontent">
+                <h2>Terminology</h2>
+                <p><strong>Income:</strong> is the money you receive in exchange for providing labor, producing a good or offering a service, and is paid by an employer.</p>
+                <p><strong>Income Tax:</strong> refers to the various taxes that are withheld from your paycheck. This can include income tax at the local, state, and federal levels, as well as withholdings for Social Security and Medicare benefits.</p>
+                <p><strong>Local Income Tax:</strong> is a tax set by the local government, and are not found everywhere.</p>
+                <p><strong>State Income Tax:</strong> is a tax set by the state government, and can be found in most states, though each state has its own rate.</p>
+                <p><strong>Federal Income Tax:</strong> is a tax set by the federal government, and utilizes a bracket structure, which is the same for all citizens.</p>
+                <p><strong>Social Security Withholdings:</strong> are a percentage of your income (6.2% of the first $160,200 in income) which is withheld to support Social Security.</p>
+                <p><strong>Medicare Withholdings:</strong> are a percentage of your income (1.45%) which is withheld to support Medicare Services. (For those making over $200,000 per year, an additional 0.9% is withheld for all income over $200,000.)</p>
+                <p><strong>Net Income:</strong> is your wage after taxes and other deductions have been taken out. It is the money you "take home".</p>
+                <p><strong>Gross Income:</strong> is your wage before taxes and other deductions have been taken out.</p>
+            </div>
+
+        </section>
+
+        <p class="note" style="display: block;">The information on this site is accurate to the best of my knowledge, and is subject to change without notice. This is not financial advice. Please see an Accountant or Financial Advisor before acting on any information provided from these calculations.</p>
+        <p class="copyright">Made with &hearts; by <a href="https://www.linkedin.com/in/thejessicafelts" target="_blank">Jessica Felts</a></p>
+
+    </section>
+
+   </section>
+   <script type="text/javascript" src="../assets/js/main.js"></script>
+ </body><!-- end body -->
+</html><!-- end html -->
