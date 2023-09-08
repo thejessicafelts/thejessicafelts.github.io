@@ -127,3 +127,4 @@ function netIncomeCalculation(){
     document.getElementById("federalTax").innerHTML = "<strong>Federal Income Tax:</strong> " + federalTaxFormatted;
     document.getElementById("netIncome").innerHTML = "<strong>Net Income:</strong> " + netIncomeFormatted;
 }
+
