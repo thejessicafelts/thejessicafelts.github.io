@@ -232,7 +232,8 @@ p small strong {
 
 #taxPercentage,
 #taxPercentage strong {
-    font-size: 12px;
+    font-size: 14px;
+    font-style: italic;
 }
 
 header#project-navigation {
