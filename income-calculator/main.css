@@ -239,8 +239,8 @@ header#project-navigation {
     z-index: 1;
 }
 
-#project-navigation i.fa-github,
-#project-navigation i.fa-arrow-circle-left {
+#project-navigation i.fa-github::before,
+#project-navigation i.fa-arrow-circle-left::before {
     font-size: 25px !important;
 }
 
