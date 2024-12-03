@@ -297,3 +297,10 @@ table td a {
     font-style: normal;
     color: #000000;
 }
+
+i.fa {
+    margin-top: 2px;
+}
+i.fa-github-alt {
+    margin-top: -2px;
+}
